@@ -1,0 +1,34 @@
+/*
+    Theme name: Leeds Tidal
+    Author: Chris Lee
+    Author URI: https://chrislee.is/
+    Description: 
+    Version: 1
+    Tags: activism
+*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    line-height: 2;
+}
+
+.wrapper {
+    height: auto;
+    min-height: 100vh;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 991.98px) {
+    
+}
+
+@media screen and (max-width: 767.98px) {
+
+}
+
+
+
