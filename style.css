@@ -7,8 +7,7 @@
     Tags: activism
 */
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     line-height: 2;
@@ -19,16 +18,55 @@ body {
     min-height: 100vh;
 }
 
+/* Navbar */
+
+nav,
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+/* Homepage elements structure */
+
+#leedstidal-hero {
+    height: 100vh;
+    background-color: skyblue;
+}
+
+#leedstidal-what-we-do, #leedstidal-current-projects, #leedstidal-involved, #leedstidal-testimonials, #leedstidal-newsletter {
+    height: auto;
+    min-height: 80vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#leedstidal-what-we-do h1, #leedstidal-current-projects h1, #leedstidal-involved h1, #leedstidal-testimonials h1, #leedstidal-newsletter h1 {
+    text-align: center;
+    color: red;
+}
+
+#leedstidal-current-projects, #leedstidal-testimonials {
+    background-color: skyblue;
+}
+
+/* Homepage cards */
+
+.card-img-top {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* Responsive */
 
-@media screen and (max-width: 991.98px) {
-    
-}
+@media screen and (max-width: 991.98px) {}
 
 @media screen and (max-width: 767.98px) {
-
+    #leedstidal-caption-hide {
+        display: none;
+    }
 }
-
-
-

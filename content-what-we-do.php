@@ -1,11 +1,11 @@
 <div class="container-fluid" id="leedstidal-what-we-do">
 
-    <h2>
+    <h1>
         <?php 
                 $what_we_do_title = wpautop(get_post_meta( get_the_ID(), 'what_we_do_title', true ));
                 echo ( $what_we_do_title );
             ?>
-    </h2>
+    </h1>
 
     <div class="card-deck">
         <div class="card">

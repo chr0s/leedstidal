@@ -1,11 +1,11 @@
-<div class="container-fluid" id="leedstidal-involved">
+<div class="container-fluid" id="leedstidal-newsletter">
 
-    <h2>
+    <h1>
         <?php 
                 $newsletter_title = wpautop(get_post_meta( get_the_ID(), 'newsletter_title', true ));
                 echo ( $newsletter_title );
             ?>
-    </h2>
+    </h1>
 
     <div class="row">
         <div class="col-6">

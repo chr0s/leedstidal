@@ -1,11 +1,11 @@
 <div class="container-fluid" id="leedstidal-current-projects">
 
-    <h2>
+    <h1>
         <?php 
                 $current_projects_title = wpautop(get_post_meta( get_the_ID(), 'current_projects_title', true ));
                 echo ( $current_projects_title );
             ?>
-    </h2>
+    </h1>
 
     <?php 
         

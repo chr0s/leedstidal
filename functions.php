@@ -16,14 +16,14 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 function leedstidal_script_enqueue() {
 
     // CSS
-   wp_enqueue_style('bootstrap-grid-min', get_template_directory_uri() . '/css/bootstrap-grid.min.css' );
-   wp_enqueue_style('bootstrap-reboot-min', get_template_directory_uri() . '/css/bootstrap-reboot.min.css' );
+//   wp_enqueue_style('bootstrap-grid-min', get_template_directory_uri() . '/css/bootstrap-grid.min.css' );
+//   wp_enqueue_style('bootstrap-reboot-min', get_template_directory_uri() . '/css/bootstrap-reboot.min.css' );
    wp_enqueue_style('bootstrap-min', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style('theme-css', get_template_directory_uri() . '/style.css' );
     
     // JS
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
-    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/leedstidal.js', array(), '1.0', 'false');
+//    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+//    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/leedstidal.js', array(), '1.0', 'false');
 
 
 }
@@ -338,7 +338,7 @@ function cmb2_leedstidal_metaboxes() {
 
     $cmb->add_field( array(
         'name'      => 'Right description',
-        'id'        => 'iinvolved_right_desc',
+        'id'        => 'involved_right_desc',
         'type'      => 'textarea_small',
     ));
 
@@ -399,4 +399,19 @@ function cmb2_leedstidal_metaboxes() {
         'type'       => 'wysiwyg',
     ) );
 }
+// Register Custom Navigation Walker
+require_once('wp-bootstrap-navwalker.php');
 
+
+// Bootstrap navigation
+function bootstrap_nav()
+{
+	wp_nav_menu( array(
+            'theme_location'    => 'headermenu',
+            'depth'             => 2,
+            'container'         => 'false',
+            'menu_class'        => 'nav navbar-nav',
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'walker'            => new wp_bootstrap_navwalker())
+    );
+}
