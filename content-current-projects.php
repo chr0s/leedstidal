@@ -6,7 +6,16 @@
                 echo ( $current_projects_title );
             ?>
     </h1>
-
+    <div class="row">
+        <div id="leedstidal-boilerplate" class="col-12 col-md-8 offset-md-2">
+            <?php 
+                    $current_projects_desc = wpautop(get_post_meta( get_the_ID(), 'current_projects_desc', true ));
+                    echo ( $current_projects_desc );
+                ?>
+        </div>
+        <!-- col -->
+    </div>
+    <!-- row -->
     <?php 
         
         // The query

@@ -190,6 +190,120 @@ function cmb2_leedstidal_metaboxes() {
     ) );
 
     $cmb->add_field( array(
+        'name'       => 'Boilerplate',
+        'id'         => 'what_we_do_desc',
+        'type'       => 'wysiwyg',
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Left image',
+        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
+        'id'         => 'involved_left_image',
+        'type'       => 'file',
+    ) );
+
+    $cmb->add_field( array(
+        'name'      => 'Left description',
+        'id'        => 'involved_left_desc',
+        'type'      => 'textarea_small',
+    ));
+
+    $cmb->add_field( array(
+        'name'       => 'Left_middle image',
+        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
+        'id'         => 'involved_left_mid_image',
+        'type'       => 'file',
+    ) );
+
+    $cmb->add_field( array(
+        'name'      => 'Left_middle description',
+        'id'        => 'involved_left_mid_desc',
+        'type'      => 'textarea_small',
+    ));
+
+    $cmb->add_field( array(
+        'name'       => 'Right_middle image',
+        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
+        'id'         => 'involved_right_mid_image',
+        'type'       => 'file',
+    ) );
+
+    $cmb->add_field( array(
+        'name'      => 'Right_middle description',
+        'id'        => 'involved_right_mid_desc',
+        'type'      => 'textarea_small',
+    ));
+    
+    $cmb->add_field( array(
+        'name'       => 'Right image',
+        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
+        'id'         => 'involved_right_image',
+        'type'       => 'file',
+    ) );
+
+    $cmb->add_field( array(
+        'name'      => 'Right description',
+        'id'        => 'involved_right_desc',
+        'type'      => 'textarea_small',
+    ));
+
+    // CURRENT PROJECTS
+
+    $cmb = new_cmb2_box( array(
+        'id'            => 'leedstidal_home_current_projects',
+        'title'         => __( 'Current projects and upcoming events', 'cmb2' ),
+        'object_types'  => array( 'page'), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb-styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Section title',
+        'id'         => 'current_projects_title',
+        'type'       => 'text',
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Boilerplate',
+        'id'         => 'current_projects_desc',
+        'type'       => 'wysiwyg',
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Add a new event/project or edit existing ones via Events/projects in the sidebar!',
+        'id'         => 'current_projects_prompt',
+        'type'       => 'title',
+    ) );
+
+    // HOW CAN I GET INVOLVED
+
+    $cmb = new_cmb2_box( array(
+        'id'            => 'leedstidal_home_involved',
+        'title'         => __( 'How to get involved', 'cmb2' ),
+        'object_types'  => array( 'page'), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb-styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Section title',
+        'id'         => 'involved_title',
+        'type'       => 'text',
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Boilerplate',
+        'id'         => 'involved_desc',
+        'type'       => 'wysiwyg',
+    ) );
+
+    $cmb->add_field( array(
         'name'       => 'Left image',
         'desc'       => __( 'Images should be square!', 'cmb2' ),
         'id'         => 'what_we_do_left_image',
@@ -246,102 +360,6 @@ function cmb2_leedstidal_metaboxes() {
         'type'      => 'textarea_small',
     ));
 
-    // CURRENT PROJECTS
-
-    $cmb = new_cmb2_box( array(
-        'id'            => 'leedstidal_home_current_projects',
-        'title'         => __( 'Current projects and upcoming events', 'cmb2' ),
-        'object_types'  => array( 'page'), // Post type
-        'context'       => 'normal',
-        'priority'      => 'high',
-        'show_names'    => true, // Show field names on the left
-        // 'cmb-styles' => false, // false to disable the CMB stylesheet
-        // 'closed'     => true, // Keep the metabox closed by default
-    ) );
-
-    $cmb->add_field( array(
-        'name'       => 'Section title',
-        'id'         => 'current_projects_title',
-        'type'       => 'text',
-    ) );
-
-    $cmb->add_field( array(
-        'name'       => 'Add a new event/project or edit existing ones via Events/projects in the sidebar!',
-        'id'         => 'current_projects_prompt',
-        'type'       => 'title',
-    ) );
-
-    // HOW CAN I GET INVOLVED
-
-    $cmb = new_cmb2_box( array(
-        'id'            => 'leedstidal_home_involved',
-        'title'         => __( 'How to get involved', 'cmb2' ),
-        'object_types'  => array( 'page'), // Post type
-        'context'       => 'normal',
-        'priority'      => 'high',
-        'show_names'    => true, // Show field names on the left
-        // 'cmb-styles' => false, // false to disable the CMB stylesheet
-        // 'closed'     => true, // Keep the metabox closed by default
-    ) );
-
-    $cmb->add_field( array(
-        'name'       => 'Section title',
-        'id'         => 'involved_title',
-        'type'       => 'text',
-    ) );
-
-    $cmb->add_field( array(
-        'name'       => 'Left image',
-        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
-        'id'         => 'involved_left_image',
-        'type'       => 'file',
-    ) );
-
-    $cmb->add_field( array(
-        'name'      => 'Left description',
-        'id'        => 'involved_left_desc',
-        'type'      => 'textarea_small',
-    ));
-
-    $cmb->add_field( array(
-        'name'       => 'Left_middle image',
-        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
-        'id'         => 'involved_left_mid_image',
-        'type'       => 'file',
-    ) );
-
-    $cmb->add_field( array(
-        'name'      => 'Left_middle description',
-        'id'        => 'involved_left_mid_desc',
-        'type'      => 'textarea_small',
-    ));
-
-    $cmb->add_field( array(
-        'name'       => 'Right_middle image',
-        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
-        'id'         => 'involved_right_mid_image',
-        'type'       => 'file',
-    ) );
-
-    $cmb->add_field( array(
-        'name'      => 'Right_middle description',
-        'id'        => 'involved_right_mid_desc',
-        'type'      => 'textarea_small',
-    ));
-    
-    $cmb->add_field( array(
-        'name'       => 'Right image',
-        'desc'       => __( 'Images should be 3x2 aspect ratio, ideally 500 x 333 px', 'cmb2' ),
-        'id'         => 'involved_right_image',
-        'type'       => 'file',
-    ) );
-
-    $cmb->add_field( array(
-        'name'      => 'Right description',
-        'id'        => 'involved_right_desc',
-        'type'      => 'textarea_small',
-    ));
-
     // WHAT PEOPLE SAY
 
     $cmb = new_cmb2_box( array(
@@ -359,6 +377,12 @@ function cmb2_leedstidal_metaboxes() {
         'name'       => 'Section title',
         'id'         => 'testimonials_title',
         'type'       => 'text',
+    ) );
+
+    $cmb->add_field( array(
+        'name'       => 'Boilerplate',
+        'id'         => 'testimonials_desc',
+        'type'       => 'wysiwyg',
     ) );
 
     $cmb->add_field( array(
