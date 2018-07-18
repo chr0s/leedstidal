@@ -28,26 +28,29 @@
         
             while( $event_project_query->have_posts() ): $event_project_query->the_post(); ?>
 
+    <div class="row" >
+<div class="col-12 col-md-8 offset-md-2" style="background-color: #FEFEFE; margin-bottom: 10px; padding: 10px; border: 2px solid #404040">
     <div class="row">
+        <div class="col-2" height="auto">
 
-        <div class="col-1">
-
-            <img src="<?php the_post_thumbnail_url('sq-sm'); ?>" style="max-width:100%;max-height:100%;">
+            <img src="<?php the_post_thumbnail_url('sq-sm'); ?>" width="100%" >
 
         </div>
         <!-- col-1 -->
 
-        <div class="col-11">
+        <div class="col-10">
 
             <h2>
                 <?php the_title(); ?>
             </h2>
             <p>
                 <?php echo $post->post_content; ?></p>
-                <hr>
+            
 
         </div>
         <!-- .col-11 -->
+        </div><!-- row -->
+        </div><!-- col -->
 
     </div>
     <!-- .row -->

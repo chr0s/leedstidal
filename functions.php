@@ -413,14 +413,13 @@ function cmb2_leedstidal_metaboxes() {
     $cmb->add_field( array(
         'name'       => 'Description',
         'id'         => 'newsletter_description',
-        'type'       => 'textarea_small',
+        'type'       => 'wysiwyg',
     ) );
 
     $cmb->add_field( array(
         'name'       => 'Reasons to join',
-        'desc'       => __( 'Best formatted as bullet points', 'cmb2' ),
         'id'         => 'newsletter_reasons',
-        'type'       => 'wysiwyg',
+        'type'       => 'text',
     ) );
 }
 // Register Custom Navigation Walker
